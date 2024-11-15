@@ -1,0 +1,11 @@
+{
+  "name": "apc_bot",
+  "version": "1.0.0",
+  "description": "AI powered chat bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
