@@ -2,9 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "watch":"nodemon index.js"
+    "install": "npm install",
+    "watch": "nodemon index.js",
+    "start": "NODE_PROCESS=production node index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,11 +14,11 @@
   "description": "",
   "dependencies": {
     "axios": "^1.7.7",
-    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^3.1.7"
   }
 }

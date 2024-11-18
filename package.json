@@ -4,7 +4,11 @@
   "description": "AI powered chat bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm run install --prefix client && npm run install --prefix server",
+    "dev-client": "npm run dev --prefix client",
+    "dev-server": "npm run watch --prefix server",
+    "dev": "npm run dev-client & npm run dev-server",
+    "build": "npm run install && npm run build --prefix client && npm start --prefix server"
   },
   "author": "",
   "license": "ISC"
