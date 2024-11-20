@@ -1,12 +1,11 @@
-import { use, serializeUser, deserializeUser } from "passport";
+import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
-
 const callbackURL = process.env.CALLBACK_URL;
 
-use(
+passport.use(
   new GoogleStrategy(
     {
       clientID: googleClientId,
@@ -21,10 +20,13 @@ use(
   )
 );
 
-serializeUser((user, done) => {
+passport.serializeUser((user, done) => {
+  console.log(user);
+  done(null, user.id);
+});
+
+passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
-deserializeUser((user, done) => {
-  done(null, user);
-});
+export default passport;
