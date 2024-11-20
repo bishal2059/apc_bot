@@ -28,6 +28,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     secret: sessionSecret,
+    cookie: { secure: false },
   })
 );
 
